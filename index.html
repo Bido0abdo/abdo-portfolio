@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ar">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>منصة تعلمي</title>
+
+  <style>
+    body{
+      font-family: "Segoe UI", Tahoma, system-ui;
+      background:#0b0b0b;
+      margin:0;
+      padding:20px;
+      color:#ccc;
+    }
+
+    .container{
+      max-width:900px;
+      margin:auto;
+    }
+
+    .btn{
+      display:inline-block;
+      background:#7dd3fc;
+      padding:10px 14px;
+      border-radius:10px;
+      color:#012;
+      text-decoration:none;
+      font-weight:700;
+      margin-top:10px;
+    }
+
+    .card{
+      background:#111;
+      border-radius:12px;
+      padding:16px;
+      margin-bottom:16px;
+    }
+
+    h2{
+      color:#7dd3fc;
+    }
+  </style>
+
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- 🔵 الصورة الجديدة التي تضاف فوق العنوان -->
+    <img src="imago/me.jpg" alt="Abdo" 
+    style="
+      width:60px;
+      height:60px;
+      object-fit:cover;
+      border-radius:12px;
+      box-shadow:0 8px 20px rgba(0,0,0,0.4);
+      margin-bottom:12px;
+    ">
+
+    <h2>مرحبًا 👋</h2>
+
+    <p>هذه صفحتك الرئيسية — من هنا هنروح لصفحة المشاريع.</p>
+
+    <a class="btn" href="projects.html">اعرض مشاريعي</a>
+
+    <div class="card" style="margin-top:20px;">
+      <h3>Project 1</h3>
+      <p>customers.py — حفظ/بحث في CSV</p>
+    </div>
+
+    <div class="card">
+      <h3>Project 2</h3>
+      <p>صفحة HTML جاهزة (اللي أنت فيها دلوقتي)</p>
+    </div>
+
+    <div class="card">
+      <h3>Project 3</h3>
+      <p>Django Backend — قريبًا</p>
+    </div>
+
+    <!-- زر للذهاب إلى صفحة About -->
+    <a class="btn" href="about.html" style="background:#fff;color:#012;margin-top:20px;">عنّي</a>
+
+  </div>
+
+</body>
+</html>
