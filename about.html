@@ -1,65 +1,84 @@
 <!doctype html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>عنّي — Abdo Mohamed</title>
+
+  <!-- Cairo font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap">
+
   <style>
-    .avatar-img{
-         width:96px;
-         height:96px;
-          border-radius:12px;
-         object-fit:cover;
-        box-shadow:0 8px 30px rgba(0,0,0,0.5);
+    :root{
+      --bg-1: #07070a;
+      --bg-2: #0b0b0f;
+      --card:#111217;
+      --muted:#d1d1d1;
+      --accent:#7dd3fc;
+      --glass: rgba(255,255,255,0.03);
+      --radius:14px;
+      --shadow: 0 12px 36px rgba(2,6,23,0.6);
     }
-    body{
-      font-family: "Segoe UI", Tahoma, system-ui;
-      background:#0b0b0b;
+    :root[data-theme="light"]{
+      --bg-1:#f6f8fb;
+      --bg-2:#fff;
+      --card:#f8fafc;
+      --muted:#28343a;
+      --accent:#0369a1;
+      --glass: rgba(0,0,0,0.04);
+      --shadow: 0 10px 30px rgba(9,15,20,0.06);
+    }
+
+    *{box-sizing:border-box}
+    html,body{
+      height:100%;
       margin:0;
-      padding:20px;
-      color:#d1d1d1;
+      font-family: "Cairo", sans-serif;
+      background:linear-gradient(180deg,var(--bg-1),var(--bg-2));
+      color:var(--muted);
+      -webkit-font-smoothing:antialiased;
     }
-    .container{max-width:900px;margin:auto;}
-    .card{background:#111;border-radius:12px;padding:18px;margin-bottom:16px;box-shadow:0 8px 30px rgba(0,0,0,0.4)}
-    .back{display:inline-block;background:#7dd3fc;color:#012;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:700;margin-bottom:18px}
-    .avatar{width:96px;height:96px;border-radius:12px;background:linear-gradient(135deg,#ffd7a3,#ff9a9e);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:20px}
-    h1{color:#7dd3fc;margin:8px 0}
-    .links a{color:#7dd3fc;text-decoration:none;font-weight:700}
+
+    .container{max-width:980px;margin:28px auto;padding:20px}
+    .back{display:inline-block;background:var(--accent);color:#012;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:700;margin-bottom:18px}
+    .card{background:var(--card);border-radius:12px;padding:18px;margin-bottom:16px;box-shadow:var(--shadow)}
+    .avatar-img{width:112px;height:112px;border-radius:14px;object-fit:cover;box-shadow:0 12px 36px rgba(0,0,0,0.55);border:3px solid rgba(255,255,255,0.03)}
+    h1{color:var(--accent);margin:8px 0;font-weight:700}
+    .links a{color:var(--accent);text-decoration:none;font-weight:700;margin-left:10px}
     .skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
-    .skill{background:rgba(255,255,255,0.03);padding:8px 10px;border-radius:8px;font-size:14px}
-    /* avatar style (محسّن) */
-    .avatar-img{
-     width:112px;
-     height:112px;
-     border-radius:16px;
-     object-fit:cover;
-     box-shadow:0 12px 36px rgba(0,0,0,0.55);
-     border: 3px solid rgba(255,255,255,0.04);}
+    .skill{background:var(--glass);padding:8px 10px;border-radius:8px;font-size:14px}
+    .muted-small{color:var(--muted);font-size:14px}
+
+    /* responsive */
+    @media(max-width:720px){
+      .avatar-img{width:88px;height:88px}
+    }
   </style>
 </head>
 <body>
   <div class="container">
     <a class="back" href="index.html">⬅ الرجوع للصفحة الرئيسية</a>
 
-    <div class="card" style="display:flex;gap:16px;align-items:center">
-      <<img src="imago/me.jpg" alt="My Photo" class="avatar-img">
-      <div>
+    <div class="card" style="display:flex;gap:18px;align-items:center;flex-wrap:wrap">
+      <img src="imago/me.jpg" alt="My Photo" class="avatar-img"> <!-- غيّر المسار لو فولدر الصور مختلف -->
+      <div style="flex:1;min-width:220px">
         <h1>Abdo Mohamed</h1>
-        <div class="small">مطور ومعلّم بايثون — أبني بورتفوليو عملي ومشاريع صغيرة مفيدة</div>
-        <div style="margin-top:8px" class="links">
-          <a href="#" target="_blank">GitHub</a> ·
+        <div class="muted-small">مطور ومعلّم بايثون — أبني بورتفوليو عملي ومشاريع صغيرة مفيدة</div>
+        <div style="margin-top:10px" class="links">
+          <a href="#" target="_blank">GitHub</a>
           <a href="#" target="_blank">LinkedIn</a>
         </div>
       </div>
     </div>
 
     <div class="card">
-      <h2 style="color:#7dd3fc;margin-top:0">نبذة قصيرة</h2>
-      <p>أنا Abdo — أتعلم وأعلّم البرمجة، حالياً بشتغل على مشاريع بسيطة بالبايثون وواجهات HTML/CSS. هدفي أعمل بورتفوليو عملي نشرح فيه كل مشروع بخطوات تنفيذية.</p>
+      <h2 style="color:var(--accent);margin-top:0">نبذة قصيرة</h2>
+      <p class="muted-small">أنا Abdo — أعمل على مشاريع بايثون وواجهات HTML/CSS. أشرح كل مشروع بخطوات تنفيذية بسيطة ليتعلم غيري ويشوف شغلي.</p>
     </div>
 
     <div class="card">
-      <h2 style="color:#7dd3fc;margin-top:0">المهارات</h2>
+      <h2 style="color:var(--accent);margin-top:0">المهارات</h2>
       <div class="skills">
         <div class="skill">Python</div>
         <div class="skill">HTML &amp; CSS</div>
@@ -69,11 +88,9 @@
     </div>
 
     <div class="card">
-      <h2 style="color:#7dd3fc;margin-top:0">تواصل</h2>
-      <p>لو حابب تشوف مشاريعي أو تتواصل: ضع روابط GitHub/LinkedIn هنا.</p>
-      <p class="small">يمكننا بعدين نضيف نموذج تواصل حقيقي أو نربطه بإيميل.</p>
+      <h2 style="color:var(--accent);margin-top:0">تواصل</h2>
+      <p class="muted-small">لو حابب تشوف مشاريعي أو تتواصل: ضع رابط GitHub/LinkedIn هنا وسأرد عليك.</p>
     </div>
-
   </div>
 </body>
 </html>

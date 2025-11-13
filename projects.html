@@ -1,62 +1,62 @@
 <!doctype html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>مشاريعي</title>
+  <title>مشاريعي — Abdo Mohamed</title>
+
+  <!-- Cairo font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap">
+
   <style>
-    body{
-      font-family: "Segoe UI", Tahoma, system-ui;
-      background:#0b0b0b;
-      margin:0;
-      padding:20px;
-      color:#ccc;
+    :root{
+      --bg-1: #07070a;
+      --bg-2: #0b0b0f;
+      --card:#111217;
+      --muted:#d1d1d1;
+      --accent:#7dd3fc;
+      --radius:12px;
+      --shadow: 0 12px 36px rgba(2,6,23,0.6);
     }
-    .container{
-      max-width:900px;
-      margin:auto;
+    :root[data-theme="light"]{
+      --bg-1:#f6f8fb;
+      --bg-2:#fff;
+      --card:#fff;
+      --muted:#28343a;
+      --accent:#0369a1;
+      --shadow: 0 10px 30px rgba(9,15,20,0.06);
     }
-    .project{
-      background:#111;
-      border-radius:12px;
-      padding:16px;
-      margin-bottom:16px;
-    }
-    .back{
-      display:inline-block;
-      background:#7dd3fc;
-      padding:10px 14px;
-      border-radius:10px;
-      color:#012;
-      text-decoration:none;
-      font-weight:700;
-      margin-bottom:20px;
-    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:20px;font-family:"Cairo",sans-serif;background:linear-gradient(180deg,var(--bg-1),var(--bg-2));color:var(--muted)}
+    .container{max-width:980px;margin:auto}
+    .back{display:inline-block;background:var(--accent);color:#012;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:700;margin-bottom:18px}
+    .project{background:var(--card);border-radius:12px;padding:16px;margin-bottom:16px;box-shadow:var(--shadow)}
+    h2{color:var(--accent)}
+    a.link{color:var(--accent);text-decoration:none;font-weight:700}
+    .muted-small{color:var(--muted)}
   </style>
 </head>
 <body>
-
   <div class="container">
     <a class="back" href="index.html">⬅ الرجوع</a>
 
-    <h2 style="color:#7dd3fc;">مشاريعي</h2>
+    <h2>مشاريعي</h2>
 
     <div class="project">
       <h3>Project 1: customers.py</h3>
-      <p>برنامج حفظ وبحث في ملفات CSV.</p>
+      <p class="muted-small">برنامج حفظ وبحث في ملفات CSV — <a class="link" href="#" target="_blank">رابط GitHub</a></p>
     </div>
 
     <div class="project">
       <h3>Project 2: HTML Page</h3>
-      <p>واجهة جاهزة قابلة للتطوير.</p>
+      <p class="muted-small">الصفحة الحالية — واجهة جاهزة قابلة للتطوير.</p>
     </div>
 
     <div class="project">
       <h3>Project 3: Django Backend</h3>
-      <p>هيبدأ لاحقًا.</p>
+      <p class="muted-small">سيبدأ لاحقًا — API ولوحة إدارة.</p>
     </div>
-
   </div>
-
 </body>
 </html>
