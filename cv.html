@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>السيرة الذاتية — Abdo</title>
+
+<!-- خط Cairo -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap">
+
+<style>
+:root{
+  --bg-1:#07070a;
+  --bg-2:#0b0b0f;
+  --card:#111217;
+  --muted:#d1d1d1;
+  --accent:#7dd3fc;
+  --glass: rgba(255,255,255,0.03);
+  --radius:14px;
+  --shadow:0 12px 36px rgba(2,6,23,0.6);
+}
+
+body{
+  margin:0;
+  font-family:"Cairo",sans-serif;
+  background:linear-gradient(180deg,var(--bg-1),var(--bg-2));
+  color:var(--muted);
+}
+
+header{
+  padding:20px;
+  max-width:1100px;
+  margin:auto;
+}
+
+.back-btn{
+  display:inline-block;
+  background:var(--accent);
+  color:#012;
+  padding:8px 14px;
+  border-radius:10px;
+  font-weight:700;
+  text-decoration:none;
+}
+
+.container{
+  max-width:900px;
+  margin:25px auto;
+  background:var(--card);
+  padding:30px;
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+}
+
+h2{
+  color:var(--accent);
+  margin-top:0;
+}
+
+.section-title{
+  color:var(--accent);
+  font-size:20px;
+  margin-top:30px;
+  margin-bottom:10px;
+}
+
+.skill-box{
+  background:var(--glass);
+  display:inline-block;
+  padding:8px 12px;
+  margin:6px 6px 0 0;
+  border-radius:10px;
+  color:var(--accent);
+  font-weight:700;
+}
+
+hr{
+  border:0;
+  border-bottom:1px solid #222;
+  margin:20px 0;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <a class="back-btn" href="index.html">← الرجوع للصفحة الرئيسية</a>
+</header>
+
+<div class="container">
+
+  <!-- الاسم -->
+  <h2>Abdo Mohamed</h2>
+  <p>Python Developer • Web Developer (HTML/CSS)</p>
+
+  <hr>
+
+  <!-- ملخص -->
+  <div class="section-title">الملخص المهني</div>
+  <p>
+  مطور بايثون مهتم ببناء مشاريع صغيرة، أدوات CSV، وصفحات ويب بسيطة.  
+  أحب كتابة كود نظيف وبسيط، والبحث عن حلول بشكل عملي.
+  </p>
+
+  <!-- المهارات -->
+  <div class="section-title">المهارات</div>
+  <div>
+    <span class="skill-box">Python</span>
+    <span class="skill-box">HTML & CSS</span>
+    <span class="skill-box">Git / GitHub</span>
+    <span class="skill-box">Django (أساسيات)</span>
+    <span class="skill-box">Problem Solving</span>
+  </div>
+
+  <!-- المشاريع -->
+  <div class="section-title">المشاريع</div>
+  <p><b>customers.py</b> — برنامج CRUD لحفظ وبحث البيانات داخل CSV.</p>
+  <p><b>Portfolio Website</b> — موقع شخصي بـ HTML/CSS.</p>
+  <p><b>Django Backend</b> — تطوير API (قيد التنفيذ).</p>
+
+  <!-- التعليم -->
+  <div class="section-title">التعليم</div>
+  <p>تعليم ذاتي — دورات وبرامج تدريبية عبر الإنترنت.</p>
+
+  <!-- تواصل -->
+  <div class="section-title">تواصل</div>
+  <p>
+    GitHub: <a href="https://github.com/YOUR_GITHUB" target="_blank">github.com/YOUR_GITHUB</a><br>
+    LinkedIn: <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank">linkedin.com/in/YOUR_LINKEDIN</a>
+  </p>
+
+</div>
+
+</body>
+</html>
