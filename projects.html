@@ -3,68 +3,66 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>مشاريعي — Abdo</title>
-
+<title>مشاريعي — Abdo Mohamed</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap">
-
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap">
 <style>
-:root{--bg:#07070a;--card:#111217;--muted:#d1d1d1;--accent:#7dd3fc;--radius:12px;--shadow:0 12px 36px rgba(0,0,0,0.6)}
+:root{--bg:#07070a;--card:#0f1113;--muted:#d1d1d1;--accent:#7dd3fc;--radius:12px;--shadow:0 12px 36px rgba(0,0,0,0.6)}
+*{box-sizing:border-box}
 body{margin:0;font-family:"Cairo",sans-serif;background:linear-gradient(180deg,var(--bg),#0b0b0b);color:var(--muted)}
-.page{max-width:1100px;margin:20px auto;padding:12px}
+.container{max-width:1100px;margin:20px auto;padding:12px}
 .header-back{display:inline-block;background:var(--accent);color:#012;padding:8px 12px;border-radius:10px;text-decoration:none;font-weight:700}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-top:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:18px}
 .card{background:var(--card);padding:16px;border-radius:12px;box-shadow:var(--shadow)}
-.project-img{width:100%;height:160px;object-fit:cover;border-radius:8px;background:#0b0b0f}
-h2{color:var(--accent);margin:0 0 10px 0}
+.project-img{width:100%;height:150px;object-fit:cover;border-radius:8px;background:#0b0b0f}
+.h2{color:var(--accent);margin:12px 0 6px 0}
 .small{color:var(--muted)}
 .btn{display:inline-block;background:var(--accent);color:#012;padding:8px 12px;border-radius:8px;text-decoration:none;font-weight:700;margin-top:10px}
+@media(max-width:600px){.project-img{height:120px}}
 </style>
 </head>
 <body>
-
-<div class="page">
+<div class="container">
   <a class="header-back" href="index.html">← الرجوع للصفحة الرئيسية</a>
-
-  <h2 style="margin-top:18px">مشاريعي</h2>
-  <p class="small">هنا مجموعة المشاريع التي عملت عليها — اضغط أي مشروع لفتح تفاصيله (أو لرؤية الكود على GitHub).</p>
+  <h2 class="h2">مشاريعي</h2>
+  <p class="small">هنا مجموعة المشاريع التي عملت عليها — اضغط على أزرار كل مشروع لعرض الكود أو التفاصيل.</p>
 
   <div class="grid">
 
-    <!-- Project 1 -->
+    <!-- project 1 -->
     <div class="card">
-      <img src="imago/project1.jpg" alt="project1" class="project-img">
+      <img src="imago/project1.jpg" alt="customers.py" class="project-img">
       <h3 style="margin:10px 0 6px 0">customers.py</h3>
-      <p class="small">أداة بسيطة لحفظ والبحث في ملفات CSV — مناسبة لإدارة بيانات العملاء الصغيرة.</p>
-      <div style="display:flex;gap:8px;flex-wrap:wrap">
-        <a class="btn" href="https://github.com/YOUR_GITHUB/customers.py" target="_blank">عرض الكود على GitHub</a>
+      <p class="small">أداة بسيطة لحفظ والبحث في ملفات CSV — إضافة وعرض وبحث لبيانات العملاء الصغيرة.</p>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px">
+        <a class="btn" href="https://github.com/Bido0abdo/customers.py" target="_blank">عرض الكود على GitHub</a>
         <a class="btn" href="project-customers.html" style="background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--accent)">تفاصيل المشروع</a>
       </div>
     </div>
 
-    <!-- Project 2 -->
+    <!-- project 2 -->
     <div class="card">
-      <img src="imago/project2.jpg" alt="project2" class="project-img">
+      <img src="imago/project2.jpg" alt="HTML Portfolio" class="project-img">
       <h3 style="margin:10px 0 6px 0">HTML Portfolio</h3>
-      <p class="small">موقع بورتفوليو شخصي متعدد الصفحات (HTML & CSS) — الواجهة التي تبني بها مشاريعك.</p>
-      <div style="display:flex;gap:8px;flex-wrap:wrap">
-        <a class="btn" href="https://github.com/YOUR_GITHUB/portfolio-html" target="_blank">عرض الكود</a>
+      <p class="small">موقع بورتفوليو شخصي متعدد الصفحات بـ HTML/CSS — الواجهة التي تعرض مشاريعك وقصتك المهنية.</p>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px">
+        <a class="btn" href="https://github.com/Bido0abdo" target="_blank">مستودع المشاريع</a>
         <a class="btn" href="index.html" style="background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--accent)">عرض الموقع</a>
       </div>
     </div>
 
-    <!-- Project 3 -->
+    <!-- project 3 -->
     <div class="card">
-      <img src="imago/project3.jpg" alt="project3" class="project-img">
-      <h3 style="margin:10px 0 6px 0">Django Backend (قادم)</h3>
-      <p class="small">جاري العمل على باك إند ب Django لربط قاعدة بيانات وواجهة إدارية.</p>
-      <div style="display:flex;gap:8px;flex-wrap:wrap">
-        <a class="btn" href="https://github.com/YOUR_GITHUB" target="_blank">مستودعاتي</a>
+      <img src="imago/project3.jpg" alt="Django backend" class="project-img">
+      <h3 style="margin:10px 0 6px 0">Django Backend (قيد العمل)</h3>
+      <p class="small">جاري العمل على باك إند بـ Django لربط قاعدة بيانات وواجهة إدارية للمشروع.</p>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px">
+        <a class="btn" href="https://github.com/Bido0abdo" target="_blank">مستودعاتي</a>
       </div>
     </div>
 
   </div>
 </div>
-
 </body>
 </html>

@@ -4,75 +4,78 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>نبذة — Abdo Mohamed</title>
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap">
-
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap">
 <style>
 :root{
-  --bg-1:#07070a; --card:#111217; --muted:#d1d1d1; --accent:#7dd3fc;
-  --glass:rgba(255,255,255,0.03); --radius:14px; --shadow:0 12px 36px rgba(0,0,0,0.6);
+  --bg:#07070a; --card:#0f1113; --muted:#d1d1d1; --accent:#7dd3fc;
+  --glass:rgba(255,255,255,0.02); --radius:14px; --shadow:0 12px 36px rgba(0,0,0,0.6);
 }
-body{margin:0;font-family:"Cairo",sans-serif;background:linear-gradient(180deg,var(--bg-1),#0b0b0b);color:var(--muted)}
-.page{max-width:1100px;margin:20px auto;padding:12px}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Cairo",sans-serif;background:linear-gradient(180deg,var(--bg),#0b0b0b);color:var(--muted)}
+.container{max-width:1100px;margin:20px auto;padding:16px}
 .header-back{display:inline-block;background:var(--accent);color:#012;padding:8px 12px;border-radius:10px;text-decoration:none;font-weight:700}
-.container{display:flex;gap:20px;align-items:flex-start;margin-top:18px}
-.card{background:var(--card);padding:20px;border-radius:var(--radius);box-shadow:var(--shadow);width:100%}
-.profile{display:flex;gap:16px;align-items:center}
-.avatar{width:110px;height:110px;border-radius:14px;object-fit:cover;box-shadow:0 12px 36px rgba(0,0,0,0.6)}
-.h1{color:var(--accent);margin:0;font-size:22px}
-.lead{margin:6px 0;color:var(--muted)}
-.section{margin-top:18px}
-.skills{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+.grid{display:flex;gap:20px;align-items:flex-start;margin-top:18px}
+.card{background:var(--card);padding:20px;border-radius:var(--radius);box-shadow:var(--shadow)}
+.avatar{width:120px;height:120px;border-radius:14px;object-fit:cover;box-shadow:0 12px 36px rgba(0,0,0,0.6)}
+.title{color:var(--accent);margin:0 0 6px 0;font-size:22px}
+.lead{color:var(--muted);margin:6px 0}
+.skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
 .skill{background:rgba(255,255,255,0.03);padding:8px 12px;border-radius:10px;color:var(--accent);font-weight:700}
+.small{color:var(--muted);line-height:1.6}
+.aside{width:300px}
 .link{color:var(--accent);text-decoration:none}
-.small{color:var(--muted);font-size:14px}
-@media(max-width:880px){.container{flex-direction:column}}
+@media(max-width:880px){.grid{flex-direction:column}.aside{width:auto}}
 </style>
 </head>
 <body>
-
-<div class="page">
+<div class="container">
   <a class="header-back" href="index.html">← الرجوع للصفحة الرئيسية</a>
 
-  <div class="container">
-    <div class="card">
+  <div class="grid">
+    <div class="card" style="flex:1">
       <div style="display:flex;gap:18px;align-items:center">
         <img src="imago/me.jpg" alt="Abdo" class="avatar">
         <div>
-          <div class="h1">Abdo Mohamed</div>
-          <div class="lead">مطور ومعلم بايثون — أبني بورتفوليو عملي ومشاريع صغيرة مفيدة</div>
-
+          <h1 class="title">Abdo Mohamed</h1>
+          <div class="lead">مطور ومعلم بايثون — أبني بورتفوليو عملي ومشروعات بسيطة مفيدة</div>
           <div style="margin-top:10px">
-            <a class="link" href="https://github.com/YOUR_GITHUB" target="_blank">GitHub</a> ·
+            <a class="link" href="https://github.com/Bido0abdo" target="_blank">GitHub</a> ·
             <a class="link" href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank">LinkedIn</a>
           </div>
         </div>
       </div>
 
-      <div class="section">
+      <section style="margin-top:18px">
         <h3 style="color:var(--accent);margin:0">نبذة قصيرة</h3>
-        <p class="small">أنا Abdo — أتعلم وأعمل على مشاريع بسيطة بالبايثون وواجهات HTML/CSS. أشرح كل مشروع بخطوات تنفيذية واضحة وأشارك الكود في GitHub.</p>
-      </div>
+        <p class="small">أنا Abdo — أتعلم وأعمل على مشاريع بسيطة بالـ Python وواجهات HTML/CSS. كل مشروع أشرحه خطوة بخطوة وأنشر الكود في GitHub. أحب بناء أدوات عملية تساعد أصحاب الأعمال الصغيرة.</p>
+      </section>
 
-      <div class="section">
+      <section style="margin-top:16px">
         <h3 style="color:var(--accent);margin:0">المهارات</h3>
         <div class="skills">
-          <div class="skill">Python</div>
-          <div class="skill">HTML & CSS</div>
-          <div class="skill">Django (أساسيات)</div>
-          <div class="skill">Git / GitHub</div>
+          <span class="skill">Python</span>
+          <span class="skill">HTML & CSS</span>
+          <span class="skill">Django (أساسيات)</span>
+          <span class="skill">Git / GitHub</span>
         </div>
-      </div>
+      </section>
 
-      <div class="section">
+      <section style="margin-top:16px">
+        <h3 style="color:var(--accent);margin:0">التعليم</h3>
+        <p class="small">تعليم ذاتي + دورات أونلاين. أطبّق ما أتعلمه مباشرة في مشاريع عملية.</p>
+      </section>
+
+      <section style="margin-top:16px">
         <h3 style="color:var(--accent);margin:0">تواصل</h3>
-        <p class="small">البريد: <a class="link" href="mailto:anabodi58@gmail.com">anabodi58@gmail.com</a></p>
-        <p class="small">واتساب: <a class="link" href="https://wa.me/201096576629" target="_blank">01096576629</a></p>
-      </div>
+        <p class="small">📧 <a class="link" href="mailto:anabodi58@gmail.com">anabodi58@gmail.com</a></p>
+        <p class="small">📱 <a class="link" href="https://wa.me/201096576629" target="_blank">01096576629</a></p>
+      </section>
+
     </div>
 
-    <aside style="width:320px">
+    <aside class="aside">
       <div class="card">
         <h4 style="margin:0 0 10px 0;color:var(--accent)">روابط سريعة</h4>
         <p class="small"><a class="link" href="projects.html">صفحة المشاريع</a></p>
@@ -82,6 +85,5 @@ body{margin:0;font-family:"Cairo",sans-serif;background:linear-gradient(180deg,v
     </aside>
   </div>
 </div>
-
 </body>
 </html>
