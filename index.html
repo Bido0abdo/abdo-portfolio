@@ -1,217 +1,252 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Abdo Mohamed — منصة تعلّمي</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Abdo Mohamed — منصة تعلّمي</title>
 
-<!-- خط Cairo -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet"
-href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap">
+  <!-- خط Cairo -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap">
 
-<style>
-:root{
-  --bg-1:#07070a;
-  --bg-2:#0b0b0f;
-  --card:#111217;
-  --muted:#d1d1d1;
-  --accent:#7dd3fc;
-  --glass: rgba(255,255,255,0.03);
-  --radius:14px;
-  --shadow:0 12px 36px rgba(2,6,23,0.6);
-}
+  <style>
+    :root{
+      --bg-1:#07070a;
+      --bg-2:#0b0b0f;
+      --card:#111217;
+      --muted:#d1d1d1;
+      --accent:#7dd3fc;
+      --glass: rgba(255,255,255,0.03);
+      --radius:14px;
+      --shadow:0 12px 36px rgba(2,6,23,0.6);
+    }
 
-body{
-  margin:0;
-  font-family:"Cairo",sans-serif;
-  background:linear-gradient(180deg,var(--bg-1),var(--bg-2));
-  color:var(--muted);
-}
+    html,body{
+      height:100%;
+      margin:0;
+      font-family:"Cairo",sans-serif;
+      background:linear-gradient(180deg,var(--bg-1),var(--bg-2));
+      color:var(--muted);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
 
-header{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:20px;
-  max-width:1100px;
-  margin:auto;
-}
+    /* layout wrapper */
+    .page{
+      max-width:1100px;
+      margin:0 auto;
+      padding:12px 20px 80px 20px;
+    }
 
-.brand{
-  display:flex;
-  gap:14px;
-  align-items:center;
-}
+    /* header */
+    header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      padding:18px 0;
+    }
+    .brand{display:flex;align-items:center;gap:14px}
+    .logo{
+      width:46px;height:46px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#60a5fa);
+      display:flex;align-items:center;justify-content:center;color:#012;font-weight:800;
+      box-shadow:var(--shadow);
+    }
+    h1.site-title{margin:0;font-size:18px;color:var(--accent);font-weight:700}
+    .lead{font-size:13px;color:var(--muted);opacity:.9}
 
-.logo{
-  width:46px;
-  height:46px;
-  background:var(--accent);
-  color:#012;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  border-radius:12px;
-  font-weight:700;
-}
+    /* header contact block (on left due to rtl) */
+    .header-contact{
+      display:flex;
+      flex-direction:column;
+      align-items:flex-end;
+      gap:8px;
+      min-width:220px;
+    }
+    .header-contact a.info{
+      color:var(--accent);
+      text-decoration:none;
+      font-weight:700;
+      font-size:13px;
+    }
+    .header-buttons{display:flex;gap:8px;align-items:center}
+    .btn-sm{
+      padding:6px 10px;border-radius:8px;text-decoration:none;font-weight:700;
+      background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--accent)
+    }
+    .btn-cv{
+      padding:6px 10px;border-radius:8px;text-decoration:none;font-weight:700;
+      background:#0af;color:#012;border:none
+    }
 
-.lead{
-  font-size:14px;
-  opacity:.8;
-}
+    /* main layout */
+    main{
+      display:grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap:22px;
+      align-items:start;
+      margin-top:8px;
+    }
 
-/* أيقونات */
-.icon-links{display:flex;gap:10px;margin-top:6px}
-.icon-link{
-  display:inline-flex;
-  justify-content:center;
-  align-items:center;
-  width:38px;
-  height:38px;
-  border-radius:10px;
-  background:rgba(255,255,255,0.04);
-  text-decoration:none;
-  color:var(--accent);
-  box-shadow:0 6px 18px rgba(0,0,0,0.35);
-  transition:.2s;
-}
-.icon-link:hover{transform:translateY(-3px)}
-.icon-link svg{width:20px;height:20px}
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      padding:20px;
+      box-shadow:var(--shadow);
+    }
 
-/* layout */
-main{
-  display:grid;
-  grid-template-columns:1.3fr 0.7fr;
-  gap:22px;
-  max-width:1100px;
-  margin:10px auto;
-  padding:20px;
-}
+    .hero{
+      background:var(--glass);
+      border-radius:var(--radius);
+      padding:26px;
+      margin-top:20px;
+    }
+    .hero h2{margin:0 0 8px 0;color:var(--accent);font-size:22px}
+    .muted-small{color:var(--muted);font-size:14px}
 
-.card{
-  background:var(--card);
-  border-radius:var(--radius);
-  padding:20px;
-  box-shadow:var(--shadow);
-  margin-bottom:16px;
-}
+    .btn{
+      display:inline-block;
+      background:var(--accent);
+      color:#012;
+      padding:10px 16px;
+      border-radius:10px;
+      font-weight:700;
+      text-decoration:none;
+      margin-top:12px;
+      margin-left:8px;
+    }
 
-.hero{
-  background:var(--glass);
-  border-radius:var(--radius);
-  padding:26px;
-  margin-top:20px;
-}
+    /* sidebar */
+    aside .card{position:sticky;top:100px}
+    .profile{display:flex;gap:12px;align-items:center}
+    .avatar-img{width:84px;height:84px;border-radius:12px;object-fit:cover;box-shadow:0 12px 36px rgba(0,0,0,0.55)}
+    .small{font-size:13px;color:var(--muted)}
 
-.btn{
-  display:inline-block;
-  background:var(--accent);
-  color:#012;
-  padding:10px 16px;
-  border-radius:10px;
-  font-weight:700;
-  text-decoration:none;
-  margin-top:12px;
-  margin-left:6px;
-}
+    /* icon links */
+    .icon-links{display:flex;gap:10px;margin-top:8px}
+    .icon-link{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:10px;background:rgba(255,255,255,0.03);color:var(--accent);text-decoration:none;box-shadow:0 6px 18px rgba(0,0,0,0.35)}
+    .icon-link svg{width:18px;height:18px}
 
-aside .card{
-  position:sticky;
-  top:100px;
-}
+    /* projects list */
+    .project-card{background:var(--card);padding:14px;border-radius:12px;margin-bottom:12px}
 
-.avatar-img{
-  width:82px;
-  height:82px;
-  border-radius:12px;
-  object-fit:cover;
-  box-shadow:0 12px 36px rgba(0,0,0,0.55);
-}
+    /* floating whatsapp */
+    .wa-float{
+      position:fixed;
+      bottom:20px;
+      left:20px;
+      background:#25D366;
+      color:#fff;
+      padding:14px 18px;
+      border-radius:999px;
+      box-shadow:0 12px 36px rgba(0,0,0,0.35);
+      text-decoration:none;
+      font-weight:800;
+      z-index:9999;
+    }
 
-a{color:var(--accent);text-decoration:none}
-
-</style>
+    /* responsive */
+    @media(max-width:880px){
+      main{grid-template-columns:1fr}
+      aside .card{position:static;top:auto;margin-top:12px}
+      .header-contact{align-items:flex-start}
+    }
+  </style>
 </head>
-
 <body>
+  <div class="page">
 
-<header>
-  <div class="brand">
-     <div class="logo">AB</div>
-     <div>
-       <h2 style="margin:0;color:var(--accent)">Abdo Mohamed</h2>
-       <div class="lead">منصة تعلّمي — صفحة جاهزة للتعديل السريع</div>
+    <!-- Header -->
+    <header>
+      <div class="brand">
+        <div class="logo">AB</div>
+        <div>
+          <h1 class="site-title">Abdo Mohamed</h1>
+          <div class="lead">منصة تعلّمي — صفحة جاهزة للتعديل السريع</div>
+          <div class="icon-links" style="margin-top:8px">
+            <!-- GitHub -->
+            <a class="icon-link" href="https://github.com/YOUR_GITHUB" target="_blank" title="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.73.5.75 5.48.75 11.75c0 4.93 3.19 9.11 7.61 10.59.56.1.76-.24.76-.53 0-.26-.01-1.1-.01-2-3.09.67-3.74-.75-3.98-1.44-.13-.36-.69-1.44-1.18-1.73-.4-.23-.97-.8-.01-.82.9-.02 1.54.83 1.75 1.18 1.02 1.71 2.64 1.22 3.28.93.1-.72.39-1.22.71-1.5-2.77-.32-5.68-1.39-5.68-6.17 0-1.36.49-2.47 1.29-3.34-.13-.33-.56-1.66.12-3.46 0 0 1.05-.34 3.45 1.28A11.8 11.8 0 0112 6.8c1.06.01 2.13.14 3.12.42 2.39-1.62 3.44-1.28 3.44-1.28.69 1.8.26 3.13.13 3.46.8.87 2.29 1.98 2.29 3.34 0 4.79-2.92 5.85-5.7 6.16.4.35.76 1.03.76 2.08 0 1.5-.01 2.71-.01 3.08 0 .29.2.64.77.53C19.06 20.86 22.25 16.68 22.25 11.75 22.25 5.48 17.27.5 12 .5z"/></svg>
+            </a>
+            <!-- LinkedIn -->
+            <a class="icon-link" href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank" title="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11.75 20h-3v-10h3v10zm-1.5-11.3c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.78 1.75 1.75-.79 1.75-1.75 1.75zm13.25 11.3h-3v-5.6c0-1.34-.03-3.06-1.86-3.06-1.86 0-2.15 1.45-2.15 2.95v5.71h-3v-10h2.88v1.37h.04c.4-.76 1.37-1.56 2.82-1.56 3.02 0 3.58 1.99 3.58 4.57v5.62z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
 
-       <!-- أيقونات -->
-       <div class="icon-links">
+      <!-- contact block -->
+      <div class="header-contact">
+        <a class="info" href="mailto:anabodi58@gmail.com">✉ anabodi58@gmail.com</a>
+        <a class="info" href="https://wa.me/201096576629" target="_blank">📱 واتساب: 01096576629</a>
+        <div class="header-buttons">
+          <a class="btn-cv" href="cv.html">CV</a>
+          <a class="btn-sm" href="contact.html">اتصل</a>
+        </div>
+      </div>
+    </header>
 
-         <!-- GitHub -->
-         <a class="icon-link" href="https://github.com/YOUR_GITHUB" target="_blank">
-           <svg viewBox="0 0 24 24" fill="currentColor">
-             <path d="M12 .5C5.73.5.75 5.48.75 11.75c0 4.93 3.19 9.11 7.61 10.59.56.1.76-.24.76-.53 0-.26-.01-1.1-.01-2-3.09.67-3.74-.75-3.98-1.44-.13-.36-.69-1.44-1.18-1.73-.4-.23-.97-.8-.01-.82.9-.02 1.54.83 1.75 1.18 1.02 1.71 2.64 1.22 3.28.93.1-.72.39-1.22.71-1.5-2.77-.32-5.68-1.39-5.68-6.17 0-1.36.49-2.47 1.29-3.34-.13-.33-.56-1.66.12-3.46 0 0 1.05-.34 3.45 1.28A11.8 11.8 0 0112 6.8c1.06.01 2.13.14 3.12.42 2.39-1.62 3.44-1.28 3.44-1.28.69 1.8.26 3.13.13 3.46.8.87 2.29 1.98 2.29 3.34 0 4.79-2.92 5.85-5.7 6.16.4.35.76 1.03.76 2.08 0 1.5-.01 2.71-.01 3.08 0 .29.2.64.77.53C19.06 20.86 22.25 16.68 22.25 11.75 22.25 5.48 17.27.5 12 .5z"/>
-           </svg>
-         </a>
+    <!-- main content -->
+    <main>
+      <!-- right / main column -->
+      <div>
+        <div class="hero card">
+          <h2>👋 مرحبًا</h2>
+          <p class="muted-small">هذه صفحة بداية سريعة — تقدر تغيّر النص، الألوان، وتضيف مشاريعك وروابطك.</p>
 
-         <!-- LinkedIn -->
-         <a class="icon-link" href="https://www.linkedin.com/in/YOUR_LINKEDIN" target="_blank">
-           <svg viewBox="0 0 24 24" fill="currentColor">
-             <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11.75 20h-3v-10h3v10zm-1.5-11.3c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.78 1.75 1.75-.79 1.75-1.75 1.75zm13.25 11.3h-3v-5.6c0-1.34-.03-3.06-1.86-3.06-1.86 0-2.15 1.45-2.15 2.95v5.71h-3v-10h2.88v1.37h.04c.4-.76 1.37-1.56 2.82-1.56 3.02 0 3.58 1.99 3.58 4.57v5.62z"/>
-           </svg>
-         </a>
+          <div style="margin-top:14px">
+            <a class="btn" href="projects.html">اعرض مشاريعي</a>
+            <a class="btn" href="cv.html" style="background:#0af;color:#012">السيرة الذاتية (CV)</a>
+          </div>
 
-       </div>
-     </div>
+          <div style="margin-top:18px">
+            <div class="project-card"><strong>Project 1:</strong> customers.py — حفظ/بحث في CSV (تم)</div>
+            <div class="project-card"><strong>Project 2:</strong> صفحة هوم جاهزة — سنعدلها الآن</div>
+            <div class="project-card"><strong>Project 3:</strong> Django backend (قادم)</div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:14px">
+          <h3 style="margin:0 0 8px 0">محتوى الصفحة</h3>
+          <p class="muted-small">نص، صور، فيديوهات، وملفات قابلة للتحميل — كل حاجة ممكن تتحط هنا بسرعة.</p>
+
+          <h4 style="margin-top:12px">نموذج اتصال (محاكاة)</h4>
+          <form class="contact" onsubmit="event.preventDefault(); alert('شكراً — ستصلك رسالة تأكيد (محاكاة)')">
+            <input placeholder="اسمك" required style="padding:10px;border-radius:10px;border:0;background:var(--card);color:var(--muted);width:100%;margin-bottom:8px">
+            <input placeholder="بريدك (أو رابط تواصل)" required style="padding:10px;border-radius:10px;border:0;background:var(--card);color:var(--muted);width:100%;margin-bottom:8px">
+            <textarea placeholder="رسالتك" style="padding:10px;border-radius:10px;border:0;background:var(--card);color:var(--muted);width:100%;min-height:90px"></textarea>
+            <button class="btn" type="submit" style="margin-top:10px">أرسل</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- left / sidebar -->
+      <aside>
+        <div class="card">
+          <div class="profile">
+            <img src="imago/me.jpg" class="avatar-img" alt="Abdo">
+            <div>
+              <div style="font-weight:700;color:var(--muted);font-size:16px">Abdo Mohamed</div>
+              <div class="small">مطور ومعلّم بايثون — أبني بورتفوليو عملي</div>
+            </div>
+          </div>
+
+          <div style="margin-top:14px">
+            <h4 style="margin:0 0 8px 0;color:var(--accent)">روابط سريعة</h4>
+            <p style="margin:6px 0"><a href="https://github.com/YOUR_GITHUB" target="_blank">GitHub</a></p>
+            <p style="margin:6px 0"><a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank">LinkedIn</a></p>
+            <p style="margin:6px 0"><a href="contact.html">صفحة التواصل</a></p>
+          </div>
+        </div>
+      </aside>
+    </main>
+
   </div>
-</header>
 
-<main>
-
-  <!-- اليمين -->
-  <div>
-
-    <!-- Hero -->
-    <div class="hero">
-      <h2 style="margin:0;color:var(--accent)">👋 مرحبًا</h2>
-      <p>هذه صفحة بداية سريعة — تقدر تغيّر النص، الألوان، وتضيف مشاريعك وروابطك.</p>
-
-      <!-- زر المشاريع -->
-      <a class="btn" href="projects.html">اعرض مشاريعي</a>
-
-      <!-- زر CV -->
-      <a class="btn" href="cv.html" style="background:#0af;color:#012">
-        السيرة الذاتية (CV)
-      </a>
-    </div>
-
-    <div class="card">
-      <h3>Project 1</h3>
-      <p>حفظ/بحث في CSV — <b>customers.py</b></p>
-    </div>
-
-    <div class="card">
-      <h3>Project 2</h3>
-      <p>صفحة HTML جاهزة (اللي أنت فيها دلوقتي)</p>
-    </div>
-
-    <div class="card">
-      <h3>Project 3</h3>
-      <p>Backend Django (قادم)</p>
-    </div>
-
-  </div>
-
-  <!-- الشمال -->
-  <aside>
-    <div class="card">
-      <img src="imago/me.jpg" class="avatar-img" alt="me">
-      <h3 style="color:var(--accent)">روابط سريعة:</h3>
-      <p><a href="https://github.com/YOUR_GITHUB" target="_blank">GitHub</a></p>
-      <p><a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank">LinkedIn</a></p>
-    </div>
-  </aside>
-
-</main>
+  <!-- WhatsApp floating button (رقم دولي: 201096576629) -->
+  <a class="wa-float" href="https://wa.me/201096576629" target="_blank">💬 تواصل عبر واتساب</a>
 
 </body>
 </html>
